@@ -1,0 +1,41 @@
+ESTO SIRVE PARA TESTEAR UNA WEB APPLICATION EN FASE DE DESARROLLO, SIN DEPLOYAR.
+
+****
+****EN EL CMD (USÉ ATOM TERMINAL)
+
+mkdir 
+para crear carpeta
+
+cd 
+para fijar el current directory donde quiero
+
+python -m venv .vent
+crea en ese directorio un entorno virtual
+
+.venv\Scripts\activate
+lo activa (ver que el cmd empieza a correr desde .venv)
+
+****
+****LUEGO CREAR EN ESTE DIRECTORIO
+application.py
+
+que contiene lo siguiente:
+
+from flask import Flask
+
+application=Flask(__name__)
+
+@application.route('/')
+def VivaPeron():
+    return "Viva Peron"
+
+****
+****LUEGO CORRER DESDE TERMINAL
+
+set FLASK_APP=application.py
+$env:FLASK_APP="application.py"
+flask run --host=0.0.0.0
+
+Y abrir en el explorador https://127.0.0.1:5000
+
+ESTO SIRVE PARA TESTEAR UNA WEB APPLICATION EN FASE DE DESARROLLO, SIN DEPLOYAR.
